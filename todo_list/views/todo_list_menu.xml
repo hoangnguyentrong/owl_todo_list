@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+            id="menu_root_todo_list"
+            name="Todo List"
+    />
+
+    <menuitem
+            id="menu_todo_list"
+            parent="menu_root_todo_list"
+            name="Todo List"
+            action="action_todo_list"
+    />
+
+    <menuitem
+            id="menu_owl_todo_list"
+            parent="menu_root_todo_list"
+            name="OWL Todo List"
+            action="action_owl_todo_list"
+    />
+</odoo>

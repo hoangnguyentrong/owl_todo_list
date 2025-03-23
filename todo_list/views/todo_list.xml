@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.actions.act_window" id="action_todo_list">
+        <field name="name">Todo List</field>
+        <field name="res_model">owl.todo.list</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.client" id="action_owl_todo_list">
+        <field name="name">Owl Todo List</field>
+        <field name="tag">owl.action_todo_list_js</field>
+    </record>
+
+
+</odoo>
