@@ -2,13 +2,15 @@
 <odoo>
     <menuitem
             id="menu_root_todo_list"
-            name="Todo List"
+            name="OWL Tutorial"
+            sequence="10"
     />
 
     <menuitem
             id="menu_todo_list"
             parent="menu_root_todo_list"
             name="Todo List"
+            sequence="10"
             action="action_todo_list"
     />
 
@@ -16,6 +18,7 @@
             id="menu_owl_todo_list"
             parent="menu_root_todo_list"
             name="OWL Todo List"
+            sequence="15"
             action="action_owl_todo_list"
     />
 </odoo>

@@ -16,7 +16,7 @@
     # any module necessary for this one to work correctly
     'depends': ['base_setup'],
     'data': [
-        # 'security/ir.model.access.csv',
+        "security/ir.model.access.csv",
         # 'data/student_data.xml',
         'views/todo_list.xml',
         'views/todo_list_menu.xml',
