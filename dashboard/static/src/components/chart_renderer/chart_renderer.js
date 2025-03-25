@@ -11,7 +11,7 @@ export class ChartRenderer extends Component {
             await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js")
         })
 
-        onMounted(()=>this.renderChart())
+        onMounted(()=>this.renderChart());
     }
 
     renderChart(){
@@ -20,23 +20,7 @@ export class ChartRenderer extends Component {
         this.chartRef.el,
         {
                   type: this.props.type,
-                  data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow'
-                    ],
-                        datasets: [
-                        {
-                        label: 'My First Dataset',
-                        data: [300, 50, 100],
-                        hoverOffset: 4
-                        },{
-                        label: 'My Second Dataset',
-                        data: [100, 70, 150],
-                        hoverOffset: 4
-                        }]
-                  },
+                  data: this.props.config?.data,
                   options: {
                     responsive: true,
                     plugins: {
@@ -48,11 +32,14 @@ export class ChartRenderer extends Component {
                         text: this.props.title,
                         position: 'bottom',
                       }
-                    }
+                    },
+                    scales: this.props.config?.scales ?? {}
+//                    scales: 'scales' in this.props.config ? this.props.config.scales : {}
                   },
         }
         );
     }
+
 }
 
 ChartRenderer.template = 'dashboard.ChartRenderer'
