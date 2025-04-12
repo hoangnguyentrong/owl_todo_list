@@ -14,10 +14,10 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base_setup'],
+    'depends': ['base','base_setup'],
     'data': [
         "security/ir.model.access.csv",
-        # 'data/student_data.xml',
+        "views/res_partner.xml",
         'views/todo_list.xml',
         'views/todo_list_menu.xml',
     ],
@@ -26,9 +26,7 @@
     'application': True,
     'assets': {
         'web.assets_backend': [
-            "todo_list/static/src/*/*.js",
-            "todo_list/static/src/*/*.scss",
-            "todo_list/static/src/*/*.xml",
+            "todo_list/static/src/**/*",
         ],
     },
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="todo_list.resPartnerListView.Button" t-inherit="web.ListView.Buttons" owl="1">
+        <xpath expr="//t[contains(@t-if, '')]"></xpath>
+    </t>
+</templates>
